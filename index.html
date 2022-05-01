@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dog Generator</title>
+     <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section class="section-container">
+		<header>
+			<h1>Mankind's Best Friend!</h1>
+			<span id="dog-name">Buster the Default Doggo!</span>
+		</header>
+        <section class = 'column' id="left-column">
+            <section class="item">
+                <span>Choose your Breed!</span>
+            </section>
+            <section class="item">
+                <select class="breeds">
+                    <option value="starter" selected>Select Me!</option>
+                </select>
+            </section>
+            <section class="item">
+                <section class="img-container">
+                    <section class="container">
+                        <div>🐶🐶🐶🐶🐶🐶🐶</div>
+                        <img 
+                        src="http://placecorgi.com/300/300"
+                        class = 'dog-img'
+                        alt = 'cute dog for the homepage' 
+                        />
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class = 'column'>
+            <section class="column-item">
+                <div>What characteristics does your best-friend possess?</div>
+                <ul>
+                    <li id="MF">S: </li>
+                    <li id="age">Age: </li>
+                    <li id="likes">Likes: </li>
+                    <li id="dislikes">Dislikes: </li>
+                    <li id="fun-fact">Additional Info: </li>
+                </ul>
+            </section>
+        </section>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
