@@ -1,0 +1,74 @@
+@use "../utilities" as *;
+
+
+/* Box Model Hack */
+*{
+    box-sizing: border-box;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  html {
+    font-size: 2rem;
+    font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+  }
+  header {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  select {
+    font-size: 1.1rem;
+  }
+  .section-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background: linear-gradient(#48c6ef, #6f86d6);
+  }
+  .column {
+    flex: 1;
+  }
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  span {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.3rem;
+  }
+  #dog-name {
+    font-size: 2rem;
+    text-decoration: none;
+  }
+  
+  #left-column {
+    text-align: center;
+  }
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+  /* Portrait and Landscape */
+  @media screen and (min-width: 320px) {
+    img{
+        width: 70%;
+    }
+    .item ul{
+      list-style-type: none;
+    }
+    .section-container{
+        @include flex-column;
+    }
+    /* .column{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    } */
+  }
+  
+  
+  

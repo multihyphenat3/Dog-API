@@ -7,10 +7,15 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+body{
+  min-height: 100vh;
+  height: min-content;
+}
 html {
   font-size: 2rem;
   font-family:'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
-  height: 100vh;
+  min-height: 100vh;
+  height: min-content;
 }
 header {
   margin-bottom: 30px;
@@ -25,6 +30,8 @@ select {
   padding-left: 10vw;
   padding-right: 10vw;
   background: linear-gradient(#48c6ef, #6f86d6);
+  height: 100%;
+  width: 100%;
 }
 .column {
   flex: 1;
@@ -46,6 +53,12 @@ span {
 #left-column {
   text-align: center;
 }
+.dogChar{
+  text-align: center;
+}
+ul{
+  list-style: none;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
@@ -62,7 +75,9 @@ span {
     display: flex;
     flex-direction: column;
     justify-self: space-between;
-    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    height: min-content;
   }
   /* .column{
       width: 100%;
