@@ -20,17 +20,23 @@ fetch(BREEDS_URL)
 
     select.addEventListener('change', event => {
         let url = `https://dog.ceo/api/breed/${event.target.value}/images/random`
-        getDoggoImg(url)
+        console.log(event.target.value)
+        getDoggoImg(url, event.target.value)
         doggoInfo.assignMF()
         doggoInfo.assignAge()
         doggoInfo.assignLikes()
         doggoInfo.assignDislikes()
         doggoInfo.assignFunFact()
     })
-
+    window.addEventListener('load', () => getDoggoImg(`https://dog.ceo/api/breed/corgi/images/random`)); 
     const img = document.querySelector('.dog-img')
 
-    const getDoggoImg = url => {
+    const getDoggoImg = (url, target) => {
+        // console.log(target,data.message)
+                if (target == 'starter')
+                {
+                    url = (`https://dog.ceo/api/breed/corgi/images/random`)
+                }
         fetch(url) //going to the API url above
             .then(res => {
                 return res.json(); //get JSON message back
